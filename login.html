@@ -1,0 +1,41 @@
+<HTML>
+<header>
+    <a href='home.php' style='float: left'> Hotel.com</a>
+</header>
+
+<br>
+<br>
+
+Login as Customer
+<form name="input" action= "login_secure.php" method="post" >
+    <br> Login ID: <input type="text" name="login">
+    <br> Password: <input type="password" name="password">
+    <input type="submit" value="Login">
+</form>
+<br>
+<hr>
+
+Login as Owner
+<form name="input" action= "login_secure_owner.php" method="post" >
+    <br> Login ID: <input type="text" name="login_owner">
+    <br> Password: <input type="password" name="password_owner">
+    <input type="submit" value="Login">
+</form>
+<br>
+<hr>
+
+Register New User
+<form name="input" action= "register_secure.php" method="post" >
+    <div style="justify-content: space-around">
+        <br><input type="text" pattern="^[a-zA-Z0-9._%±]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" name="email" placeholder="Email" required>
+        <br><input type="text" name="first" placeholder="First Name" required> <input type="text" name="last"  placeholder="Last Name" required>
+        <br><input type="text" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" placeholder="Phone (XXX-XXX-XXXX)" required>
+        <br><input type="password" name="pass"  placeholder="Password" required>
+        <br><select name="type">
+            <option value="Customers">Customers</option>
+            <option value="Owner">Owner</option>
+        </select>
+        <br><input type="submit" value="Register">
+    </div>
+</form>
+</HTML>
